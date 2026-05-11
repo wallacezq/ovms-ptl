@@ -1,0 +1,13 @@
+{
+  "model_config_list": [
+    {
+      "config": {
+        "name": "Qwen/Qwen3-8B",
+        "base_path": "/workspace/models",
+        "plugin_config": {
+          "PERFORMANCE_HINT": "THROUGHPUT"
+        }
+      }
+    }
+  ]
+}
