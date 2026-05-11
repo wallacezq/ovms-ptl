@@ -28,8 +28,8 @@ if [ ! -d .venv-export ]; then
 fi
 
 echo "=== [2/4] Install export deps into .venv-export ==="
-uv pip install --python .venv-export/bin/python -U pip setuptools wheel
-uv pip install --python .venv-export/bin/python -r "$TOOLS_DIR/export_requirements.txt"
+uv pip install --python .venv-export/bin/python --pre -U pip setuptools wheel
+uv pip install --python .venv-export/bin/python --no-build-isolation --index-strategy unsafe-best-match -U --pre -r "$TOOLS_DIR/export_requirements.txt"
 
 echo "=== [3/4] Export model to OpenVINO IR ==="
 echo "Model: $MODEL_NAME"
