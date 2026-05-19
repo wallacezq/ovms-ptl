@@ -43,7 +43,8 @@ uv run --python .venv-export/bin/python "$TOOLS_DIR/export_model.py" text_genera
   --cache_size "$CACHE_SIZE" \
   --config_file_path "$OUT_DIR/config.json" \
   --model_repository_path "$OUT_DIR" \
-  --overwrite_models
+  --overwrite_models \
+  --tool_parser hermes3 
 
 echo "=== [4/4] Done ==="
 echo "Exported model is in: $OUT_DIR"

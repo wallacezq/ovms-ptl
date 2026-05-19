@@ -23,8 +23,7 @@ docker run -d --rm \
   -v "$CONFIG_DIR":/workspace/config:ro \
   "$IMAGE" \
   --rest_port 8000 \
-  --config_path /workspace/config/config.json \
-  --enable_prefix_caching true \
-  --rest_workers 1
+  --config_path /workspace/models/config.json \
+  --rest_workers 3
 
 echo "✅ OVMS 2026.1 started. Endpoint: http://localhost:8000/v3/chat/completions"
